@@ -1,0 +1,28 @@
+h1 {
+    text-align: center;
+}
+.flex-elem {
+    border: black solid 1px;
+    display: flex;
+    width: 17vw;
+    height: 15vh;
+    align-items: center;
+  justify-content: center;
+}
+
+
+.my-flexbox1 {
+    border: red 1px solid;
+    display: flex;
+    align-content: center;
+}
+
+.my-flexbox2 {
+    border: green 1px solid;
+    display: flex;
+}
+
+.my-flexbox3 {
+    border: blue 1px solid;
+    display: flex;
+}
