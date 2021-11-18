@@ -1,28 +1,67 @@
+:root {
+    font-family: 'Indie Flower', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
 h1 {
     text-align: center;
 }
+
 .flex-elem {
     border: black solid 1px;
     display: flex;
-    width: 17vw;
-    height: 15vh;
+    min-width: 17vw;
+    min-height: 15vh;
     align-items: center;
-  justify-content: center;
+    justify-content: center;
+}
+
+#my-flexboxes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 13vh;
 }
 
 
 .my-flexbox1 {
-    border: red 1px solid;
     display: flex;
-    align-content: center;
+    flex-flow: row nowrap;
+    justify-content: center;
 }
 
 .my-flexbox2 {
-    border: green 1px solid;
     display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
 }
 
 .my-flexbox3 {
-    border: blue 1px solid;
     display: flex;
+    justify-content: center;
 }
+
+#restaurant::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+
+@media (min-width: 320px) {
+    .flex-elem {
+        font-size: 1rem;
+        padding: 0.5rem;
+    } 
+
+    #my-flexboxes {
+        margin-top: 6vh;
+    }
+   
+    }
