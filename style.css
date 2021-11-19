@@ -7,10 +7,12 @@
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
 h1 {
     text-align: center;
+    font-size: 3rem;
 }
 
 .flex-elem {
@@ -20,6 +22,7 @@ h1 {
     min-height: 15vh;
     align-items: center;
     justify-content: center;
+    font-size: 1.5rem;
 }
 
 #my-flexboxes {
@@ -29,37 +32,23 @@ h1 {
     margin-top: 13vh;
 }
 
-/* top row containg one element*/
-
-.my-flexbox1 {
+.my-flexbox1,
+.my-flexbox2,
+.my-flexbox3 
+ {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: center;
-}
-
-/*second row containing two elements*/
-
-.my-flexbox2 {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-}
-
-/*second row containing three elements*/
-
-.my-flexbox3 {
-    display: flex;
     justify-content: center;
 }
 
 /* Create border pop style animation for the first row */
-#restaurant {
+.border-pop {
     position: relative;
     --background-color: var(--primary-color);
     --border-size: 5px;
 }
 
-#restaurant::before {
+.border-pop::before {
     content: "";
     position: absolute;
     top: 0;
@@ -71,8 +60,8 @@ h1 {
     transition: top, left, right, bottom, 100ms ease-in-out;
 }
 
-#restaurant:hover::before, 
-#restaurant:hover::after {
+.border-pop:hover::before, 
+.border-pop:hover::after {
     top: calc(var(--border-size) * -2);
     left: calc(var(--border-size) * -2);
     right: calc(var(--border-size) * -2);
@@ -80,10 +69,11 @@ h1 {
 }
 
 /* Create background slide animation for the second row */
-#counter, 
-#arrays {
+
+.background-slide {
     position: relative;
-    --accent-color: var(--secondary-color);
+    background-color: var(--secondary-color);
+    --accent-color: var(--primary-color);
     z-index: 1;
 }
 
@@ -124,7 +114,8 @@ h1 {
 
 .border-underline {
     position: relative;
-    --accent-color: var(--tertiary-color);
+    --accent-color: var(--primary-color);
+    background-color: var(--tertiary-color);
 }
 
 .border-underline::before {
@@ -146,7 +137,7 @@ h1 {
 
 
 
-@media (min-width: 320px) {
+@media (max-width: 480px) {
     .flex-elem {
         font-size: 1rem;
         padding: 0.5rem;
@@ -155,5 +146,4 @@ h1 {
     #my-flexboxes {
         margin-top: 6vh;
     }
-   
-    }
+}
